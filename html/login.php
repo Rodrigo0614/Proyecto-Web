@@ -62,7 +62,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iniciar sesion</title>
     
-    <link rel="icon" type="image/jpg" href="../img/Logoxlogin.png"/>
+    <link rel="icon" type="image/jpg" href="../img/Logox.png"/>
     <link href="https://file.myfontastic.com/t5tNwfwUapz4yDzK3B6sfe/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style2.css">
