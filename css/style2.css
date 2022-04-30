@@ -1,0 +1,42 @@
+.bad{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff    
+}
+
+.ok{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e6;
+    color: #fff
+}
+.mb{
+    margin-bottom: 20px;
+}
+
+
+
+.tablax{
+    border: 3px groove;
+    width: 40%;
+}
+
+th{
+    text-align: center;
+}
+
+#btnnn{
+    margin-top: 1.4em;
+}
+
+.img-fluid{
+    display:block;
+    margin:auto;
+}
+
+.border-primary{
+    padding: -15px;
+}
