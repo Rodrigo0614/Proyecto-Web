@@ -1,0 +1,185 @@
+<?php
+
+
+session_start();
+if (!isset($_SESSION['id'])) {
+  header("Location: index.php");
+}
+
+$nombre = $_SESSION['nombre'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Salón de eventos</title>
+  <link rel="icon" type="../image/jpg" href="../img/Logox.png" />
+  <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+  <link href="https://file.myfontastic.com/t5tNwfwUapz4yDzK3B6sfe/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+
+
+</head><br>
+
+
+
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -30px;">
+
+    <img src="../img/Logox.png" width="135" height="105" class="d-inline-block align-top" alt="">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="links">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php"><span class="fs-5 text-light fw-bold  ">Inicio</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag2.php"><span class="fs-5 text-light fw-bold  ">Sacramentos</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag3.php"><span class="fs-5 text-light fw-bold  ">Aprende</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag4.php"><span class="fs-5 text-light fw-bold  ">Sobre nosotros</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/contacto.php"><span class="fs-5 text-light fw-bold  ">Contáctanos</span></a>
+          </li>
+        </ul>
+
+
+        </ul>
+        <div class="d-flex" id="barra">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="../sistema/principal.php" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $nombre;?></a>
+          <a class="nav-link btn btn-outline" aria-current="page" href="../sistema/logout.php">Cerrar sesión</a>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<body>
+
+
+  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="../img/iglesiax1.jpg" class="d-block w-100" alt="" width="60%">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="../img/iglesiax2.png" class="d-block w-100" alt="..." width="60%">
+      </div>
+
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/iglesiax3.png" class="d-block w-100" alt="..." width="60%">
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> <br><br>
+
+
+    <div class="container">
+      <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto" id="intro">
+        <h1 class="p-3 fs-1 fw-bolder border-top border-3 ">¡Bienvenidos a la casa de Dios!</h1>
+        <p class="p-3  fs-4 fst-italic ">
+          ¿Necesitas que oremos por ti?
+        </p>
+      </section> <br><br>
+
+      <div class="container text-center">
+        <h3>¿Desea realizar una petición?</h3>
+        <a href="../usuario/contacto.php">Realicela aquí</a>
+
+
+
+
+
+
+      </div><br><br>
+
+      </section>
+
+
+      <section>
+
+
+        <div id="local" class="border-top border-2">
+          <div class="mapa"> </div>
+          <div>
+            <div class="wrapper-local ">
+
+              <h2 class="text-primary mb-4" id="typewriter"></h2>
+
+              <div class="mapa__iframe text-center">
+                <h3>Nuestra ubicación</h3>
+                <h3 class="text-primary mb-4" id="typewriter"></h3>
+                <p>Ven y visitanos, te esperamos!</p>
+                <center>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15666.791702561193!2d-74.791782!3d10.986158!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d02c128557d%3A0x29ec83480cc6d055!2sJaime%20Borja!5e0!3m2!1ses-419!2sco!4v1633566863973!5m2!1ses-419!2sco" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </center>
+              </div><br><br>
+              <section class="d-flex justify-content-start" id="numeros-local">
+
+
+
+              </section>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
+      <footer class="footer">
+        <div class="container bg-dark text-light">
+          <div class="text-center">
+            <img src="../img/icono1.png " class="rounded" alt="" title="" width="5%">
+            <img src="../img/icono2.png" class="rounded" alt="" title="" width="5%">
+            <img src="../img/icono3.png" class="rounded" alt="" title="" width="5%">
+          </div>
+
+
+          <p class="copy text-center">&copy; Todos los derechos reservados a Iglesia LosAndes | 2022 <br> Steven rizo, Rodrigo gonzales, Jose navarro</p>
+
+
+        </div>
+
+      </footer>
+
+
+
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/SesionIndex.js"></script>
+
+
+</body>
+
+</html>

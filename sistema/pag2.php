@@ -1,0 +1,202 @@
+<?php
+
+
+session_start();
+if (!isset($_SESSION['id'])) {
+  header("Location: index.php");
+}
+
+$nombre = $_SESSION['nombre'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nuestras ofertas y eventos</title>
+  <link rel="icon" type="image/jpg" href="../img/Logoxmoney.png" />
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+  <script src="https://kit.fontawesome.com/a13612c050.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  
+
+  <script src="../js/bootstrap.min.js"></script>
+
+</head><br>
+
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -30px;">
+
+    <img src="../img/Logox.png" width="135" height="105" class="d-inline-block align-top" alt="">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="links">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php"><span class="fs-5 text-light fw-bold  ">Inicio</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag2.php"><span class="fs-5 text-light fw-bold  ">Sacramentos</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag3.php"><span class="fs-5 text-light fw-bold  ">Aprende</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/pag4.php"><span class="fs-5 text-light fw-bold  ">Sobre nosotros</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../sistema/contacto.php"><span class="fs-5 text-light fw-bold  ">Contáctanos</span></a>
+          </li>
+        </ul>
+
+
+        </ul>
+        <div class="d-flex" id="barra">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="../sistema/principal.php" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $nombre;?></a>
+          <a class="nav-link btn btn-outline" aria-current="page" href="../sistema/logout.php">Cerrar sesión</a>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<body>
+   
+  <div class="container">
+    <p> <h2>Sacramentos</h2>
+            Para la Iglesia católica, los sacramentos son signos eficaces de la gracia de Dios,​ celebrados bajo ritos visibles, que fueron instituidos por Cristo y confiados a la Iglesia, mediante los cuales se dispensa la vida divina a todas personas que los reciben con la disposición adecuada.​
+            Existen siete sacramentos: bautismo, confirmación, eucaristía, penitencia, unción de enfermos, orden sacerdotal y matrimonio. Los sacramentos se corresponden a todas las etapas y momentos importantes de la vida del creyente, estableciendo un paralelismo entre las etapas de la vida natural y las etapas de la vida espiritual. Así, los sacramentos se pueden clasificar en tres grupos: los "sacramentos de la iniciación cristiana", los "sacramentos de curación" y los "sacramentos al servicio de la comunión y la misión de los fieles".
+
+        </p>
+
+        <p>
+            <h2>Sacramentos de iniciación cristiana</h2> 
+            <ul>
+                <li>Bautismo: Es el fundamento de toda la vida cristiana, el pórtico de la vida en el espíritu y la puerta que abre el acceso a los otros sacramentos. Por el Bautismo los cristianos son liberados del pecado y regenerados como hijos de Dios, llegan a ser miembros de Cristo y son incorporados a la Iglesia y hechos partícipes de su misión. </li>  <br>
+                 <li> <b>​Confirmación:</b> Con el bautismo y la eucaristía, el sacramento de la confirmación constituye el conjunto de los "sacramentos de la iniciación cristiana". La confirmación une a los bautizados más íntimamente a la Iglesia y "los enriquece con una fortaleza especial del Espíritu Santo. De esta forma se comprometen mucho más, como auténticos testigos de Cristo, a extender y defender la fe con sus palabras y sus obras"  </li> <br>
+                 <li> <b>​Eucaristía:</b> Este sacramento culmina la iniciación cristiana. Los que han sido elevados a la dignidad del sacerdocio real por el Bautismo y configurados más profundamente con Cristo por la Confirmación, participan por medio de la Eucaristía con toda la comunidad en el sacrificio mismo del Señor.</li>  <br> ​Cabe mencionar que para el catolicismo la Eucaristía no representa un símbolo sino que es Jesucristo mismo con su cuerpo, sangre, alma y divinidad presentes en la Eucaristía.
+                </ul>     
+        </p>
+      
+
+        <div class="text-center">
+          
+          <img src="..\img\img5.jfif" height="300px" width="650px" alt="Imagen no encontrada">
+        
+        </div>
+
+      
+
+      <p>
+          <ol>
+              <b><li>Sacramentos de curación</li></b> <br>
+              <ul>
+               <li> <a href="https://es.wikipedia.org/wiki/Sacramento_de_la_penitencia" target="blank" rel="noopener noreferrer"><b>Penitencia</b> </a>: Mediante este sacramento los fieles obtienen de la misericordia de Dios el perdón de los pecados cometidos contra él y se reconcilian con la Iglesia. Recibe el nombre de sacramento de conversión, ya que realiza sacramentalmente la llamada de Cristo a la conversión, la vuelta al Padre del que el hombre se había alejado por el pecado; sacramento de la penitencia, al consagrar un proceso personal y eclesial de conversión, de arrepentimiento y de reparación por parte del cristiano pecador; sacramento de la confesión, porque la manifestación de los pecados ante el sacerdote es un elemento esencial de este sacramento; sacramento del perdón porque Dios concede al penitente "el perdón y la paz"; y sacramento de reconciliación, porque otorga al pecador el amor de Dios que reconcilia.</li>
+               <li>Unción de los enfermos: Con la sagrada unción de los enfermos y con la oración de los presbíteros, toda la Iglesia entera encomienda a los enfermos al Señor sufriente y glorificado para que los alivie y los salve. Incluso los anima a unirse libremente a la pasión y muerte de Cristo; y contribuir, así, al bien del Pueblo de Dios" </li> <br>
+               
+              
+              </ul>
+              <b><li>Sacramentos al servicio de la comunidad</li></b> <br>
+              <ul>
+                  <li> <a href="https://es.wikipedia.org/wiki/Sacramento_del_orden" target="blank" rel="noopener noreferrer"><b>Orden sacerdotal:</b> </a> El Orden es el sacramento gracias al cual la misión confiada por Cristo a sus Apóstoles sigue siendo ejercida en la Iglesia hasta el fin de los tiempos: es, pues, el sacramento del ministerio apostólico. Comprende tres grados: el diaconado, el presbiterado y el episcopado.
+                  Es el único sacramento que solo puede ser recibido por los hombres.</li>
+                  <li> <b>Matrimonio</b> "La alianza matrimonial, por la que el varón y la mujer constituyen entre sí un consorcio de toda la vida, ordenado por su misma índole natural al bien de los cónyuges y a la generación y educación de la prole, fue elevada por Cristo Nuestro Señor a la dignidad de sacramento entre bautizados"</li>
+                  
+              </ul>
+      </p>
+      <div class="d-flex justify-content-center">
+      <table>
+          <tr>
+             
+              <th>Mandamientos</th>
+              <th>Cita biblica</th>
+              
+          </tr>
+      
+          <tr>
+        
+            <td>1. Amarás a Dios sobre todas las cosas.</td>
+            <td>(Ex 20, 2-5)</td>
+            
+          </tr>
+        
+          <tr>
+        
+            <td>2. No tomarás el nombre de Dios en vano</td>
+            <td>(Ex 20, 7; Dt 5, 11)</td>
+            
+        
+          </tr>
+          <tr>
+              <td>3. Santificarás las fiestas</td>
+              <td>(Ex 20, 8-10; cf Dt 5, 12-15)</td>
+          </tr>
+          <tr>
+              <td>4. Honrarás a tu padre y a tu madre</td>
+              <td>(Ex 20, 12)</td>
+          </tr>
+          <tr>
+              <td>5. No matarás</td>
+              <td>(Ex 20, 13)</td>
+          </tr>
+          <tr>
+              <td>6. No cometerás actos impuros</td>
+              <td>(Ex 20, 14; Dt 5, 17)</td>
+          </tr>
+          <tr>
+              <td>7. No robarás</td>
+              <td>(Ex 20, 15; Dt 5,19)</td>
+          </tr>
+          <tr>
+              <td>8. No darás falsos testimonios ni mentirás</td>
+              <td>(Ex 20, 16)</td>
+          </tr>
+          <tr>
+              <td>9. No consentirás pensamientos ni deseos impuros</td>
+              <td>(Ex 20, 17)</td>
+          </tr>
+          <tr>
+              <td>10. No codiciarás los bienes ajenos</td>
+              <td>(Dt 5, 21)</td>
+          </tr>
+
+      </table>
+    </div>
+ </div><br><br>
+    
+
+    
+
+ <footer class="footer">
+  <div class="container bg-dark text-light">
+      <div class="text-center">
+        <img src="../img/icono1.png " class="rounded" alt="Facebook" title="" width="5%" >
+        <img src="../img/icono2.png" class="rounded" alt="Twitter" title="" width="5%" >
+        <img src="../img/icono3.png" class="rounded" alt="Youtube" title="" width="5%" >
+      </div>
+      
+   
+    <p class="copy text-center">&copy; Todos los derechos reservados a Iglesia LosAndes | 2022 <br> Steven rizo, Rodrigo gonzales, Jose navarro</p>
+
+    
+      </div>
+  
+  </footer>   
+  <script src="../js/sesion.js"></script>
+</body>
+
+</html>
